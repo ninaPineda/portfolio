@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nina Heinrich - Grafik & Werbedesign</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./tailwind_config.js"></script>
+  </head>
+  <body class="smooth-scroll">
+    <nav
+      class="fixed top-0 w-full z-50 navbar-transparent transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0">
+            <h1 class="text-2xl font-pacifico text-primary">Nina Heinrich</h1>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="#home"
+                class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
+                >Home</a
+              >
+              <a
+                href="#portfolio"
+                class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
+                >Portfolio</a
+              >
+              <a
+                href="#about"
+                class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
+                >Über mich</a
+              >
+              <a
+                href="#contact"
+                class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
+                >Kontakt</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="w-8 h-8 flex items-center justify-center"
+            >
+              <i class="ri-menu-line text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-gray-700 hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="#portfolio"
+            class="block px-3 py-2 text-gray-700 hover:text-primary"
+            >Portfolio</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-gray-700 hover:text-primary"
+            >Über mich</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-gray-700 hover:text-primary"
+            >Kontakt</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="hero-bg min-h-screen flex items-center justify-center relative"
+    >
+      <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+      <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+        <h1
+          class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fade-in"
+        >
+          Nina Heinrich
+        </h1>
+        <h2 class="text-2xl md:text-3xl text-gray-700 mb-8 font-light">
+          Grafik & Webdesign
+        </h2>
+        <p
+          class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed"
+        >
+          Spezialisiert auf digitale Medien, UI/UX Design und digitales
+          Marketing. Ich erschaffe visuelle Identitäten, die Geschichten
+          erzählen und Emotionen wecken.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#portfolio"
+            class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap"
+          >
+            Portfolio ansehen
+          </a>
+          <a
+            href="#contact"
+            class="border-2 border-primary text-primary px-8 py-3 !rounded-button hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap"
+          >
+            Kontakt aufnehmen
+          </a>
+        </div>
+          <a href="#portfolio" class="w-8 h-8 flex items-center justify-center">
+            <i class="ri-arrow-down-line text-2xl text-gray-600"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Eine Auswahl meiner kreativen Arbeiten in verschiedenen Bereichen
+            des Designs
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button
+            class="filter-btn active px-6 py-2 !rounded-button border border-gray-300 hover:border-primary transition-all duration-300 whitespace-nowrap"
+            data-filter="all"
+          >
+            Alle Projekte
+          </button>
+          <button
+            class="filter-btn px-6 py-2 !rounded-button border border-gray-300 hover:border-primary transition-all duration-300 whitespace-nowrap"
+            data-filter="branding"
+          >
+            Branding
+          </button>
+          <button
+            class="filter-btn px-6 py-2 !rounded-button border border-gray-300 hover:border-primary transition-all duration-300 whitespace-nowrap"
+            data-filter="ui-ux"
+          >
+            UI/UX Design
+          </button>
+          <button
+            class="filter-btn px-6 py-2 !rounded-button border border-gray-300 hover:border-primary transition-all duration-300 whitespace-nowrap"
+            data-filter="print"
+          >
+            Print Design
+          </button>
+          <button
+            class="filter-btn px-6 py-2 !rounded-button border border-gray-300 hover:border-primary transition-all duration-300 whitespace-nowrap"
+            data-filter="digital"
+          >
+            Digital Media
+          </button>
+        </div>
+
+        <div class="masonry-grid">
+          <div
+            class="masonry-item portfolio-item cursor-pointer"
+            data-category="branding"
+            data-project="1"
+          >
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+              <div class="relative overflow-hidden">
+                <img
+                  src="/Img/eule.png"
+                  alt="Branding Projekt"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div
+                    class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <h3 class="text-xl font-semibold mb-2">Secondhand Shop</h3>
+                    <p class="text-sm">Branding & Logo Design</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="masonry-item portfolio-item cursor-pointer"
+            data-category="ui-ux"
+            data-project="2"
+          >
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+              <div class="relative overflow-hidden">
+                <img
+                  src="/Img/beatmarker.png"
+                  alt="UI/UX Projekt"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div
+                    class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <h3 class="text-xl font-semibold mb-2">
+                      Musik App Design und Programmierung
+                    </h3>
+                    <p class="text-sm">UI/UX Design</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="masonry-item portfolio-item cursor-pointer"
+            data-category="print"
+            data-project="3"
+          >
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=elegant%20magazine%20layout%20design%2C%20sophisticated%20typography%2C%20clean%20editorial%20design%2C%20professional%20print%20layout%2C%20modern%20publication%20design%2C%20minimalist%20approach&width=400&height=350&seq=project-3&orientation=landscape"
+                  alt="Print Design"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div
+                    class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <h3 class="text-xl font-semibold mb-2">Magazin Layout</h3>
+                    <p class="text-sm">Print Design</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="masonry-item portfolio-item cursor-pointer"
+            data-category="digital"
+            data-project="4"
+          >
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=creative%20social%20media%20campaign%20design%2C%20modern%20digital%20graphics%2C%20engaging%20visual%20content%2C%20contemporary%20color%20palette%2C%20professional%20social%20media%20posts&width=400&height=400&seq=project-4&orientation=squarish"
+                  alt="Digital Media"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div
+                    class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <h3 class="text-xl font-semibold mb-2">
+                      Social Media Campaign
+                    </h3>
+                    <p class="text-sm">Digital Media</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="masonry-item portfolio-item cursor-pointer"
+            data-category="branding"
+            data-project="5"
+          >
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=restaurant%20branding%20package%20design%2C%20elegant%20menu%20design%2C%20sophisticated%20food%20service%20branding%2C%20professional%20hospitality%20design%2C%20clean%20visual%20identity&width=400&height=300&seq=project-5&orientation=landscape"
+                  alt="Restaurant Branding"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div
+                    class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <h3 class="text-xl font-semibold mb-2">
+                      Restaurant Branding
+                    </h3>
+                    <p class="text-sm">Branding & Identity</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="masonry-item portfolio-item cursor-pointer"
+            data-category="ui-ux"
+            data-project="6"
+          >
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden group">
+              <div class="relative overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20design%2C%20clean%20online%20shop%20interface%2C%20professional%20web%20design%2C%20user-friendly%20navigation%2C%20contemporary%20digital%20commerce&width=400&height=450&seq=project-6&orientation=portrait"
+                  alt="E-Commerce Design"
+                  class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div
+                    class="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <h3 class="text-xl font-semibold mb-2">
+                      E-Commerce Platform
+                    </h3>
+                    <p class="text-sm">Web Design</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20creative%20female%20graphic%20designer%20in%20modern%20studio%2C%20confident%20pose%2C%20contemporary%20workspace%2C%20natural%20lighting%2C%20professional%20photography%20style&width=600&height=700&seq=about-portrait&orientation=portrait"
+              alt="Sarah Weber Portrait"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+          <div>
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Über mich</h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Mit über 8 Jahren Erfahrung im Bereich Grafik- und Werbedesign
+              bringe ich kreative Visionen zum Leben. Meine Leidenschaft liegt
+              in der Entwicklung einzigartiger visueller Identitäten, die Marken
+              authentisch repräsentieren und nachhaltig im Gedächtnis bleiben.
+            </p>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              Spezialisiert auf digitale Medien, verbinde ich ästhetisches
+              Design mit funktionaler Benutzererfahrung. Jedes Projekt ist für
+              mich eine neue Herausforderung, innovative Lösungen zu entwickeln,
+              die sowohl visuell ansprechend als auch strategisch durchdacht
+              sind.
+            </p>
+
+            <div class="grid grid-cols-2 gap-6 mb-8">
+              <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-palette-line text-primary text-xl"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Branding & Identity</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-smartphone-line text-primary text-xl"></i>
+                </div>
+                <span class="text-gray-700 font-medium">UI/UX Design</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-printer-line text-primary text-xl"></i>
+                </div>
+                <span class="text-gray-700 font-medium">Print Design</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-global-line text-primary text-xl"></i>
+                </div>
+                <span class="text-gray-700 font-medium">Digital Media</span>
+              </div>
+            </div>
+
+            <a
+              href="#"
+              class="inline-flex items-center space-x-2 bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap"
+            >
+              <i class="ri-download-line"></i>
+              <span>Portfolio herunterladen</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Kontakt</h2>
+          <p class="text-xl text-gray-600">
+            Lassen Sie uns gemeinsam Ihr nächstes Projekt verwirklichen
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+              Schreiben Sie mir
+            </h3>
+            <form class="space-y-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >E-Mail</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Betreff</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Nachricht</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white py-3 px-6 !rounded-button hover:bg-opacity-90 transition-all duration-300 font-medium whitespace-nowrap"
+              >
+                Nachricht senden
+              </button>
+            </form>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+              Kontaktinformationen
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-mail-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">E-Mail</h4>
+                  <a
+                    href="mailto:hello@sarahweber.design"
+                    class="text-gray-600 hover:text-primary transition-colors"
+                  >
+                    hello@sarahweber.design
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-phone-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Telefon</h4>
+                  <a
+                    href="tel:+4915123456789"
+                    class="text-gray-600 hover:text-primary transition-colors"
+                  >
+                    +49 151 23456789
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-map-pin-line text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Standort</h4>
+                  <p class="text-gray-600">München, Deutschland</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="font-medium text-gray-900 mb-4">Folgen Sie mir</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <i class="ri-linkedin-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <i class="ri-behance-line"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  <i class="ri-dribbble-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <h3 class="text-2xl font-pacifico text-primary">Sarah Weber</h3>
+            <p class="text-gray-400 mt-2">
+              © 2025 Sarah Weber Design. Alle Rechte vorbehalten.
+            </p>
+          </div>
+          <div class="flex items-center space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Impressum</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Datenschutz</a
+            >
+            <button
+              id="scroll-top"
+              class="w-10 h-10 flex items-center justify-center bg-primary rounded-full hover:bg-opacity-80 transition-all duration-300"
+            >
+              <i class="ri-arrow-up-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="project-modal"
+      class="project-modal items-center justify-center p-4"
+    >
+      <div
+        class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+      >
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h3 id="modal-title" class="text-2xl font-bold text-gray-900"></h3>
+            <button
+              id="close-modal"
+              class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700"
+            >
+              <i class="ri-close-line text-xl"></i>
+            </button>
+          </div>
+          <div id="modal-content" class="space-y-6"></div>
+          <div class="flex justify-between items-center mt-8 pt-6 border-t">
+            <button
+              id="prev-project"
+              class="flex items-center space-x-2 text-primary hover:text-opacity-80 transition-colors"
+            >
+              <i class="ri-arrow-left-line"></i>
+              <span>Vorheriges Projekt</span>
+            </button>
+            <button
+              id="next-project"
+              class="flex items-center space-x-2 text-primary hover:text-opacity-80 transition-colors"
+            >
+              <span>Nächstes Projekt</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
